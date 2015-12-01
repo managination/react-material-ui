@@ -1,8 +1,8 @@
 Package.describe({
     name: 'mgn:material-ui',
-    version: '0.2.3',
+    version: '0.2.4',
     // Add react-material-ui to your project.
-    summary: 'Material-UI using official React package. clone of https://github.com/mrphu3074/react-material-ui.git but with material icons from google',
+    summary: 'Material-UI using official React package',
     // URL to the Git repository containing the source code for this package.
     git: 'https://github.com/managination/react-material-ui.git',
     // By default, Meteor will default to using README.md for documentation.
@@ -26,10 +26,11 @@ Package.onUse(function(api){
 
 
     api.addFiles([
-        'mui.browserify.options.json',
         'mui.browserify.js',
         'home.html'
     ], "client");
+
+    api.addAssets('mui.browserify.options.json', 'client')
 
     api.export(["MUI", "injectTapEventPlugin"]);
 });

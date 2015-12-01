@@ -1,4 +1,10 @@
-### `meteor add izzilab:material-ui`
+### `meteor add mgn:material-ui`
+### Version 0.2.4 google material icons https://www.google.com/design/icons/
+```
+    let Colors = MUI.Styles.Colors;
+    <FontIcon className="material-icons" color={Colors.white}>menu</FontIcon>
+```
+
 ### Version 0.2.X, MUI imported SvgIcons
 ```
 	let {SvgIcons} = MUI.Libs;

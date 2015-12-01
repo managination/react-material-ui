@@ -1,16 +1,16 @@
 Package.describe({
-    name: 'izzilab:material-ui',
-    version: '0.2.2',
-    // Brief, one-line summary of the package.
-    summary: 'Material-UI using official React package',
+    name: 'mng:material-ui',
+    version: '0.2.3',
+    // Add react-material-ui to your project.
+    summary: 'Material-UI using official React package. clone of https://github.com/mrphu3074/react-material-ui.git but with material icons from google',
     // URL to the Git repository containing the source code for this package.
-    git: 'https://github.com/mrphu3074/react-material-ui.git',
+    git: 'https://github.com/managination/react-material-ui.git',
     // By default, Meteor will default to using README.md for documentation.
     // To avoid submitting documentation, set this field to null.
     documentation: 'README.md'
 });
 
-var MUI_VERSION = '0.13.3';
+var MUI_VERSION = '0.13.4';
 var EXTERNALIFY_VERSION = "0.1.0";
 Npm.depends({
     'externalify': EXTERNALIFY_VERSION,
@@ -20,14 +20,16 @@ Npm.depends({
 
 Package.onUse(function(api){
 
-    api.use(['react@0.14.1_1']);
-    api.use(['cosmos:browserify@0.8.1']);
+    api.use(['react']);
+    api.use(['cosmos:browserify']);
+    api.use("templating", "client");
 
 
     api.addFiles([
         'mui.browserify.options.json',
-        'mui.browserify.js'
-    ]);
+        'mui.browserify.js',
+        'home.html'
+    ], "client");
 
     api.export(["MUI", "injectTapEventPlugin"]);
 });

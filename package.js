@@ -1,5 +1,5 @@
 Package.describe({
-    name: 'mng:material-ui',
+    name: 'mgn:material-ui',
     version: '0.2.3',
     // Add react-material-ui to your project.
     summary: 'Material-UI using official React package. clone of https://github.com/mrphu3074/react-material-ui.git but with material icons from google',
